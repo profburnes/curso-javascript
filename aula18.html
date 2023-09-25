@@ -1,0 +1,22 @@
+<script>
+    var valor = prompt("Digite o valor total da compra");
+    var parcelas = prompt("Digite a quantidade de parcelas");
+    var juros = prompt("Digite o valor do juros");
+
+    var parcela = valor / parcelas;
+    var total = 0;
+
+    for(i = 1; i <= parcelas; i++) {
+        if ( i == 1 ) {
+            valor = parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            document.write(`Parcela ${i} tem o valor de: ${valor}<br>`);
+        } else {
+            parcela = parcela + parcela * juros / 100;
+            valor = parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            document.write(`Parcela ${i} tem o valor de: ${valor}<br>`);
+        }
+        total = total + parcela;
+    }
+    total = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    document.write(`<br>TOTAL: ${total}`)
+</script>

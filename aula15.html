@@ -1,0 +1,12 @@
+<script>
+    var nota = prompt("Digite a nota");
+    var faltas = prompt("Digite o número de faltas");
+
+    if ( nota < 6 && faltas > 10 ) {
+        document.write("Reprovado por nota e faltas");
+    } else if ( nota < 6 || faltas >10 ) {
+        document.write("Reprovado por nota ou falta");
+    } else {
+        document.write("Passou!");
+    }
+</script>

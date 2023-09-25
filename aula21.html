@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <input type="text" id="nome" size="40" placeholder="Digite o nome"><br>
+    <input type="text" id="salario" size="40" placeholder="Digite o valor do salário"><br>
+    <button type="button" onclick="verificar()">Verificar</button>
+
+    <p id="resposta"></p>
+
+    <script>
+        function verificar() {
+            let nome = document.getElementById("nome").value;
+            let salario = document.getElementById("salario").value;
+
+            salario = parseFloat(salario);
+
+            valor = salario.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+            document.getElementById("resposta").innerHTML = `<br>O nome é ${nome} e o salário é ${valor}`;
+        }
+    </script>
+</body>
+</html>

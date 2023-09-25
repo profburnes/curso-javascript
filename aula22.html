@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Texto Normal</p>
+    <p>Outro texto</p>
+    <button type="button" onclick="trocar()">Trocar Texto</button>
+
+    <script>
+        function trocar() {
+            let texto = prompt("Digite um valor");
+            document.querySelector("p").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

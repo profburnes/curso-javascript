@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        var salario = prompt("Digite o salário");
+
+        if ( isNaN(salario) ) {
+            alert("Você digitou um valor não numérico");
+            location.reload();
+        }
+
+        if ( salario > 3000 ) {
+            console.log("Ai sim heim");
+        } else {
+            console.log("Ah tá bom")
+        }
+
+    </script>
+</body>
+</html>

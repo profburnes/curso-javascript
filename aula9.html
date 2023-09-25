@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos HTML Básicos</title>
+</head>
+<body>
+    <h1>Este é um Título</h1>
+    <p id="nome">Nome da pessoa</p>
+    <p id="idade">Idade da pessoa</p>
+    <p id="dias">Quantos dias ela viveu mais ou menos</p>
+
+    <button type="button" onclick="informar()">Informar</button>
+
+    <script>
+        function informar() {
+            var nome = prompt("Digite o nome");
+            var idade = prompt("Digite a idade");
+
+            document.getElementById("nome").innerHTML = nome;
+            document.getElementById("idade").innerHTML = idade;
+        }
+    </script>
+</body>
+</html>
